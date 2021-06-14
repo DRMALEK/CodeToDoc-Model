@@ -7,7 +7,7 @@ from TranslationModel import TranslationModel
 if __name__ == "__main__":
     print("Loading the dataset  ...")
     # Try experimenting with the size of that dataset
-    input_tensor, target_tensor, inp_lang, targ_lang = load_dataset("./API+JAVADOC+CODE.json")
+    input_tensor, target_tensor, inp_lang, targ_lang = load_dataset("./dataset.json")
     # Calculate max_length of the target tensors
     max_length_targ, max_length_inp = target_tensor.shape[1], input_tensor.shape[1]
     input_tensor_train, input_tensor_val, target_tensor_train, target_tensor_val = train_test_split(input_tensor,
